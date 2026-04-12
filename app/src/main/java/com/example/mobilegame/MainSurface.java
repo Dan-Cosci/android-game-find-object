@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 
 public class MainSurface extends SurfaceView implements SurfaceHolder.Callback {
 
-    SurfaceHolder holder;
+    private SurfaceHolder holder;
     public MainSurface(Context context) {
         super(context);
         this.holder = getHolder();
