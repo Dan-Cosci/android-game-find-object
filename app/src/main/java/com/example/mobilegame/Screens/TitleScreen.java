@@ -1,0 +1,37 @@
+package com.example.mobilegame.Screens;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
+import com.example.mobilegame.MainActivity;
+import com.example.mobilegame.R;
+import com.example.mobilegame.States;
+
+public class TitleScreen extends Fragment {
+    public TitleScreen() {
+        super(R.layout.fragment_title_screen);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        FrameLayout play_btn = view.findViewById(R.id.play_btn);
+
+        play_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getActivity() instanceof MainActivity){
+                    ((MainActivity) getActivity()).switchState(States.LEVEL);
+                }
+            }
+        });
+
+
+    }
+}
