@@ -1,5 +1,4 @@
 package com.example.mobilegame.Screens;
-
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -10,9 +9,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.mobilegame.R;
+import com.example.mobilegame.Util.Level;
 
 public class GameScreen extends Fragment {
 
+    private Level currentLevel;
 
 
     public GameScreen() {
@@ -22,11 +23,9 @@ public class GameScreen extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ImageView to_find = view.findViewById(R.id.to_find);
         ImageView img = view.findViewById(R.id.img);
 
         img.setImageResource(R.drawable.lvl_1);
-        to_find.setImageResource(R.drawable.logo);
 
         img.setOnTouchListener((v,event) -> {
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -39,5 +38,9 @@ public class GameScreen extends Fragment {
         });
 
 
+    }
+
+    public void setLevel(Level level){
+        currentLevel = level;
     }
 }

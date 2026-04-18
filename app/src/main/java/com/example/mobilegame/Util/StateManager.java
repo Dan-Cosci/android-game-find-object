@@ -53,7 +53,7 @@ public class StateManager {
                 f = levelScreen;
                 break;
             case GAME:
-//                gameScreen.setLevel(currentLevel);
+                gameScreen.setLevel(currentLevel);
                 f = gameScreen;
                 break;
             case PAUSE:

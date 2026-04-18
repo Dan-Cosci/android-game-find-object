@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/lvl_1" />
+            android:src="@drawable/final_lvl_1" />
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/lvl_2" />
+            android:src="@drawable/final_lvl_2" />
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/lvl_3" />
+            android:src="@drawable/final_lvl_3" />
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"

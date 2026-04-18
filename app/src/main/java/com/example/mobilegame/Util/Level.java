@@ -1,24 +1,23 @@
 package com.example.mobilegame.Util;
 
+import android.graphics.PointF;
+
 import com.example.mobilegame.R;
 
 public enum Level {
-    LEVEL_1(R.drawable.lvl_1, "Level 1", new LevelObject("fish", 100, 200)),
-    LEVEL_2(R.drawable.lvl_2, "Level 2"),
-    LEVEL_3(R.drawable.lvl_3, "Level 3");
 
-    public static class LevelObject {
-        public final String type;
-        public final int x;
-        public final int y;
-        public final int width = 50;
-        public final int height = 50;
+    LEVEL_1(R.drawable.final_lvl_1, "find the woman with the yellow scarf", new PointF[]{ new PointF(100, 100), new PointF(300, 300)}),
+    LEVEL_2(R.drawable.final_lvl_2, "Find The woman with the yellow scraf", new PointF[]{ new PointF(100, 100), new PointF(300, 300)}),
+    LEVEL_3(R.drawable.final_lvl_3, "Find the yellow book", new PointF[]{ new PointF(100, 100), new PointF(300, 300)});
 
 
-        public LevelObject(String type, int x, int y) {
-            this.type = type;
-            this.x = x;
-            this.y = y;
-        }
+    public final int IMG_ID;
+    public final String find;
+    public final PointF[] points;
+
+    Level(int img_id, String s, PointF[] points) {
+        this.IMG_ID = img_id;
+        this.find = s;
+        this.points = points;
     }
 }
