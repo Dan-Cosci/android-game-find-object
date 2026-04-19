@@ -7,9 +7,9 @@ import com.example.mobilegame.R;
 
 public enum Level {
 
-    LEVEL_1(R.drawable.final_lvl_1, "Find Bao-Bao", new RectF(100,100,300,300)),
-    LEVEL_2(R.drawable.final_lvl_2, "Find The woman with the yellow scraf", new RectF(100,100,300,300)),
-    LEVEL_3(R.drawable.final_lvl_3, "Find the yellow book", new RectF(100,100,300,300));
+    LEVEL_1(R.drawable.final_lvl_1, "Find Bao-Bao", new RectF(0.77f,0.58f,0.92f,0.76f)),
+    LEVEL_2(R.drawable.final_lvl_2, "Find The woman with the yellow scraf", new RectF(0.77f,0.58f,0.92f,0.76f)),
+    LEVEL_3(R.drawable.final_lvl_3, "Find the yellow book", new RectF(0.77f,0.58f,0.92f,0.76f));
 
 
     public final int IMG_ID;
