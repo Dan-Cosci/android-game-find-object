@@ -45,6 +45,7 @@ public class GameScreen extends Fragment {
                     float y = raw_y / img.getHeight();
 
                     System.out.println("x: " + x + " y: " + y);
+
                     return true;
                 }
                 return false;
