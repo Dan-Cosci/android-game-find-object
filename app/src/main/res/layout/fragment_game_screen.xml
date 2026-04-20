@@ -37,6 +37,76 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
+
+        <LinearLayout
+            android:id="@+id/win_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="#AA000000">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEVEL COMPLETE!"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+            <FrameLayout
+                android:id="@+id/next_btn"
+                android:layout_width="287dp"
+                android:layout_height="183dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/final_button" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Next"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:paddingBottom="15dp"
+                    />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/title_btn"
+                android:layout_width="287dp"
+                android:layout_height="183dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/final_button" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Back to start"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:paddingBottom="15dp"
+                    />
+            </FrameLayout>
+
+        </LinearLayout>
     </FrameLayout>
 
 </LinearLayout>

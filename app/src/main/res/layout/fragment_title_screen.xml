@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/lvl_1"
+        android:background="@drawable/final_title_screen"
         >
 
         <View
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="383dp"
             android:layout_marginTop="-40dp"
-            android:src="@drawable/logo"
+            android:src="@drawable/final_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                android:src="@drawable/button" />
+                android:src="@drawable/final_button" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

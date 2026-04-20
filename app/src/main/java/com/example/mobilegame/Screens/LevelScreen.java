@@ -3,6 +3,7 @@ package com.example.mobilegame.Screens;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,6 +25,14 @@ public class LevelScreen extends Fragment {
             FrameLayout level1 = view.findViewById(R.id.level1);
             FrameLayout level2 = view.findViewById(R.id.level2);
             FrameLayout level3 = view.findViewById(R.id.level3);
+
+            ImageView backBtn = view.findViewById(R.id.back_btn);
+
+            backBtn.setOnClickListener(v -> {
+                if (getActivity() instanceof MainActivity) {
+                    ((MainActivity) getActivity()).getStateManager().switchState(States.TITLE);
+                }
+            });
 
             level1.setOnClickListener(v -> {
                 if (getActivity() instanceof MainActivity) {
