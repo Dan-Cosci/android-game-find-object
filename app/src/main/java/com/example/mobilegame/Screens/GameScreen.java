@@ -4,6 +4,7 @@ import static android.view.View.VISIBLE;
 
 import android.graphics.RectF;
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -83,6 +84,7 @@ public class GameScreen extends Fragment {
                 if (x >= currentLevel.points.left && x <= currentLevel.points.right &&
                         y >= currentLevel.points.top && y <= currentLevel.points.bottom){
                     winLayout.setVisibility(VISIBLE);
+                    view.performHapticFeedback(HapticFeedbackConstants.CONFIRM);
                 }
 
                 return true;
