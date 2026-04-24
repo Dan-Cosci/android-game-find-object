@@ -19,6 +19,7 @@ import com.example.mobilegame.MainActivity;
 import com.example.mobilegame.R;
 import com.example.mobilegame.Util.DebugOverlayView;
 import com.example.mobilegame.Util.Level;
+import com.example.mobilegame.Util.SoundManager;
 import com.example.mobilegame.Util.States;
 
 public class GameScreen extends Fragment {
@@ -46,6 +47,7 @@ public class GameScreen extends Fragment {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundManager.getInstance(getContext()).playSound(SoundManager.CLICK);
                 winLayout.setVisibility(View.GONE);
                 if (getActivity() instanceof MainActivity){
                     ((MainActivity) getActivity()).getStateManager().switchState(States.LEVEL);
@@ -56,6 +58,7 @@ public class GameScreen extends Fragment {
         titleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundManager.getInstance(getContext()).playSound(SoundManager.CLICK);
                 winLayout.setVisibility(View.GONE);
                 if (getActivity() instanceof MainActivity) {
                     ((MainActivity) getActivity()).getStateManager().switchState(States.TITLE);
@@ -83,8 +86,12 @@ public class GameScreen extends Fragment {
 
                 if (x >= currentLevel.points.left && x <= currentLevel.points.right &&
                         y >= currentLevel.points.top && y <= currentLevel.points.bottom){
+                    SoundManager.getInstance(getContext()).playSound(SoundManager.WIN);
                     winLayout.setVisibility(VISIBLE);
                     view.performHapticFeedback(HapticFeedbackConstants.CONFIRM);
+                } else {
+                    SoundManager.getInstance(getContext()).playSound(SoundManager.ERROR);
+                    view.performHapticFeedback(HapticFeedbackConstants.REJECT);
                 }
 
                 return true;
